@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <script type="module" src="./script.js" defer></script>
+  </head>
+
+  <body>
+    <div class="cal-body">
+      <div class="display-region">
+        <div class="question"></div>
+        <div class="answer">0</div>
+      </div>
+
+      <div class="basic-calc-region">
+        <ul class="switch-region">
+          <li class="shift">shift</li>
+          <li class="switch">ON</li>
+        </ul>
+        <ul class="scientific-region">
+          <li value="sin(">sin</li>
+          <li value="cos(">cos</li>
+          <li value="tan(">tan</li>
+          <li data="">asin</li>
+          <li data="">acos</li>
+          <li data="">atan</li>
+          <li data="">si</li>
+          <li data="">co</li>
+          <li value="(">(</li>
+          <li value=")" class="close-bracket">)</li>
+          <li data="">del</li>
+          <li data="">clr</li>
+        </ul>
+        <ul class="number-region">
+          <li value="1">1</li>
+          <li value="2">2</li>
+          <li value="3">3</li>
+          <li value="4">4</li>
+          <li value="5">5</li>
+          <li value="6">6</li>
+          <li value="7">7</li>
+          <li value="8">8</li>
+          <li value="9">9</li>
+          <li value="0">0</li>
+          <li value=".">.</li>
+          <li data="=">=</li>
+        </ul>
+        <ul class="operator-region">
+          <li data="+">+</li>
+          <li data="-">-</li>
+          <li data="*">x</li>
+          <li data="/">/</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- <button>Op</button> -->
+  </body>
+</html>

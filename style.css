@@ -1,0 +1,136 @@
+:root {
+    --display-background-color: rgb(36, 17, 17);
+    --btn-colors-hover: brown;
+    --border-radius: 4px;
+    --box-shadows: 2rem 2rem 4rem black;
+    --border: 2px solid rgb(36, 17, 17);
+    --text-color: white;
+}
+
+* {
+    font-family: 'Open Sans',
+        sans-serif;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    height: auto;
+}
+
+.cal-body {
+    background-color: #ccc;
+    width: 23rem;
+    height: auto;
+    position: relative;
+    border-radius: 5px;
+    box-shadow: 2rem 2rem 7rem rgb(36, 17, 17);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.display-region {
+    border-radius: 5px;
+    height: auto;
+    background-color: var(--display-background-color);
+    padding: 1rem;
+    border: var(--border);
+    display: flex;
+    flex-direction: column;
+}
+
+.display-region div {
+    margin: 1rem;
+    color: var(--text-color)
+}
+
+.display-region .question {
+    font-size: 1.3rem;
+    letter-spacing: .4rem;
+}
+
+.display-region .answer {
+    font-size: 2rem;
+    text-align: right;
+}
+
+
+ul {
+    list-style-type: none;
+    padding: 0rem;
+    border: var(--border);
+    margin: 0px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem;
+    padding: 1rem;
+    border-radius: var(--border-radius);
+
+}
+
+li {
+    width: 3rem;
+    height: 3rem;
+    background-color: var(--display-background-color);
+    border-radius: var(--border-radius);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-color);
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+li:hover {
+    background-color: var(--btn-colors-hover);
+    cursor: pointer;
+}
+
+.basic-calc-region {
+    display: grid;
+    height: auto;
+    grid-template-rows: auto auto auto;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: 'switch switch switch switch'
+        'scientific scientific scientific scientific'
+        'number number number operator';
+
+    gap: .5rem;
+    margin: 1rem 0;
+}
+
+.switch-region {
+    grid-area: switch;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.scientific-region {
+    grid-area: scientific;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.number-region {
+    grid-area: number;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.operator-region {
+    grid-area: operator;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: rgb(122, 121, 121);
+}
+
+
+@media (max-width:760px){
+    .cal-body {
+       zoom: 80%;
+    }
+
+}
